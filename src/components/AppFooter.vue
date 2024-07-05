@@ -30,10 +30,105 @@ export default{
                 </li>
                 
             </ul>
-                
         </section>
         <section class="list-section">
+            <div>
+                <ul>
+                    <li>
+                        <h3>DC COMICS</h3>
+                    </li>
+                    <li>
+                        <a href="#">Characters</a>
+                    </li>
+                    <li>
+                        <a href="#">Comics</a>
+                    </li>
+                    <li>
+                        <a href="#">Movies</a>
+                    </li>
+                    <li>
+                        <a href="#">TV</a>
+                    </li>
+                    <li>
+                        <a href="#">Games</a>
+                    </li>
+                    <li>
+                        <a href="#">Videos</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <h3>SHOP</h3>
+                    </li>
+                    <li>
+                        <a href="#">Shop DC</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop DC Collectibles</a>
+                    </li>
+                </ul>
 
+                <ul>
+                    <li>
+                        <h3>DC</h3>
+                    </li>
+                    <li>
+                        <a href="#">Terme of the use</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy policy(New)</a>
+                    </li>
+                    <li>
+                        <a href="#">Ad Choices</a>
+                    </li>
+                    <li>
+                        <a href="#">Advertising</a>
+                    </li>
+                    <li>
+                        <a href="#">Jobs</a>
+                    </li>
+                    <li>
+                        <a href="#">Subscriptions</a>
+                    </li>
+                    <li>
+                        <a href="#">Talent Worksshops</a>
+                    </li>
+                    <li>
+                        <a href="#">CPSC Certificates</a>
+                    </li>
+                    <li>
+                        <a href="#">Ratings</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop Help</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+                    
+                <ul>
+                    <li>
+                        <h3>SITES</h3>
+                    </li>
+                    <li>
+                        <a href="#">DC</a>
+                    </li>
+                    <li>
+                        <a href="#">MAD Magazine</a>
+                    </li>
+                    <li>
+                        <a href="#">DC Kids</a>
+                    </li>
+                    <li>
+                        <a href="#">DC Universe</a>
+                    </li>
+                    <li>
+                        <a href="#">DC Power Visa</a>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="sign-up-section">
 
@@ -65,6 +160,26 @@ export default{
             }
 
             
+        }
+    }
+
+    .list-section{
+        background-image: url(../assets/img/footer-bg.jpg);
+        background-size: contain;
+        // DEBUG
+        min-height: 400px;
+
+        div{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            padding-top: 20px;
+
+            ul{
+                list-style-type: none;
+                line-height: 20px;
+            }
         }
     }
 </style>
