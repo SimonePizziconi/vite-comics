@@ -131,7 +131,21 @@ export default{
             </div>
         </section>
         <section class="sign-up-section">
+            <div class="container-icon">
+                <button>
+                    SIGN-UP NOW
+                </button>
 
+                <div class="icon">
+                    <span>FOLLOW US</span>
+                    <img src="../assets/img/footer-facebook.png" alt="Facebook">
+                    <img src="../assets/img/footer-twitter.png" alt="Twitter">
+                    <img src="../assets/img/footer-youtube.png" alt="Youtube">
+                    <img src="../assets/img/footer-pinterest.png" alt="Pinterest">
+                    <img src="../assets/img/footer-periscope.png" alt="Periscope">
+                </div>
+            </div>
+            
         </section>
     </footer>
 </template>
@@ -150,8 +164,9 @@ export default{
         ul{
             @include centerFlex();
             justify-content: space-between;
-            gap: 10px;
+            gap: 20px;
             list-style-type: none;
+            width: 70%;
 
             li img{
                 width: 20%;
@@ -165,7 +180,8 @@ export default{
 
     .list-section{
         background-image: url(../assets/img/footer-bg.jpg);
-        background-size: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
         // DEBUG
         min-height: 400px;
 
@@ -181,5 +197,45 @@ export default{
                 line-height: 20px;
             }
         }
+    }
+
+    .sign-up-section{
+        background-color: #303030;
+        @include centerFlex();
+        justify-content: space-between;
+        // DEBUG
+        min-height: 100px;
+
+        .container-icon{
+            @include centerFlex();
+            justify-content: space-between;
+            width: 70%;
+            margin: 0 auto;
+            
+
+            button{
+            border: 2px solid $colorprimary;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #303030;
+            color: #fff;
+            }
+        }
+
+        .icon{
+            @include centerFlex();
+
+            span{
+                color: $colorprimary;
+            }
+
+            img{
+                margin-left: 10px;
+            }
+        }
+
+
+
+        
     }
 </style>
