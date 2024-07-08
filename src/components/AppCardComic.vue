@@ -9,22 +9,26 @@ export default{
 
 <template>
     <div>
-        <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="Fumetto">
-        <h3>Action comic</h3>
+        <img :src="details.thumb" alt="Fumetto">
+        <h3>{{details.series}}</h3>
     </div>
 </template>
 
 <style lang="scss" scoped>
 
     div{
-        width: calc(100% / 6);
+        width: calc(100% / 6 - 20px);
+        
+        
 
         img{
         width: 100%;
+        aspect-ratio: 1/1;
         }
 
         h3{
-            text-align: center;
+            text-align: left;
+            font-weight: lighter;
         }
     }
 
