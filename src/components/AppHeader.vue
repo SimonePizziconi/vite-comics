@@ -1,6 +1,63 @@
 <script>
 export default{
     name: `AppHeader`,
+    data (){
+        return {
+            links: [
+                {
+                    text: "Characters",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Comics",
+                    url: "#",
+                    current: true,
+                },
+                {
+                    text: "Movies",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "TV",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Games",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Collectibles",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Videos",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Fans",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "News",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Shop",
+                    url: "#",
+                    current: false,
+                }
+
+            ]
+        }
+    }
 }
 </script>
 
@@ -12,20 +69,8 @@ export default{
             </a>
 
             <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Home</a>
+                <li v-for="(link, i) in links" :key="i">
+                    <a :class="{active: link.current}" :href="link.url">{{link.text}}</a>
                 </li>
             </ul>
         </nav>
@@ -34,6 +79,7 @@ export default{
 
 <style lang="scss" scoped>
 @use "../styles/partials/mixins" as *;
+@use "../styles/partials/variables" as *;
 
     header{
         background-color: #fff;
@@ -51,6 +97,25 @@ export default{
                 @include centerFlex ();
                 list-style-type: none;
                 gap: 20px;
+                    
+                li{
+                    a{
+                        @include centerFlex ();
+                        height: 120px;
+                        align-self: center;
+                    }
+
+                    .active{
+                        border-bottom: 5px solid $colorprimary;
+                        color: $colorprimary;
+                    }
+
+                    a:hover{
+                        color: $colorprimary;
+                        border-bottom: 5px solid $colorprimary;
+                    }
+                }
+                    
             }
         }
     }
