@@ -9,24 +9,19 @@ export default{
         <section class="info-section">
             <ul>
                 <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png" alt="DIGITAL COMICS">
-                    <a href="#">DIGITAL COMICS</a>
+                    <a href="#"><img src="../assets/img/buy-comics-digital-comics.png" alt="DIGITAL COMICS">DIGITAL COMICS</a>
                 </li>
                 <li>
-                    <img src="../assets/img/buy-comics-merchandise.png" alt="DIGITAL COMICS">
-                    <a href="#">DC MERCHANDISE</a>
+                    <a href="#"><img src="../assets/img/buy-comics-merchandise.png" alt="DIGITAL COMICS">DC MERCHANDISE</a>  
                 </li>
                 <li>
-                    <img src="../assets/img/buy-comics-subscriptions.png" alt="DIGITAL COMICS">
-                    <a href="#">SUBSCRIPTION</a>
+                    <a href="#"><img src="../assets/img/buy-comics-subscriptions.png" alt="DIGITAL COMICS">SUBSCRIPTION</a>
                 </li>
                 <li>
-                    <img src="../assets/img/buy-comics-shop-locator.png" alt="DIGITAL COMICS">
-                    <a href="#">COMIC SHOP LOCATOR</a>
+                    <a href="#"><img src="../assets/img/buy-comics-shop-locator.png" alt="">COMIC SHOP LOCATOR</a>
                 </li>
                 <li>
-                    <img src="../assets/img/buy-dc-power-visa.svg" alt="DIGITAL COMICS">
-                    <a href="#">DC POWER VISA</a>
+                    <a href="#"><img src="../assets/img/buy-dc-power-visa.svg" alt="DIGITAL COMICS">DC POWER VISA</a>
                 </li>
                 
             </ul>
@@ -128,7 +123,10 @@ export default{
                         <a href="#">DC Power Visa</a>
                     </li>
                 </ul>
-            </div>
+                <div class="img-container">
+                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                </div>
+            </div>   
         </section>
         <section class="sign-up-section">
             <div class="container-icon">
@@ -158,20 +156,26 @@ export default{
     .info-section{
         background: $colorprimary;
         @include centerFlex();
-        // DEBUG
-        min-height: 150px;
+        height: 150px;
+        position: relative;
+        z-index: 10;
 
         ul{
             @include centerFlex();
             justify-content: space-between;
             gap: 20px;
             list-style-type: none;
-            width: 70%;
+            width: 60%;
 
             li img{
-                width: 20%;
+                width: 50px;
                 vertical-align: middle;
                 margin-right: 20px;
+            }
+
+            li a{
+                color: #fff;
+                font-size: 15px;
             }
 
             
@@ -182,8 +186,7 @@ export default{
         background-image: url(../assets/img/footer-bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        // DEBUG
-        min-height: 400px;
+        padding-bottom: 40px;
 
         div{
             width: 70%;
@@ -192,9 +195,32 @@ export default{
             gap: 20px;
             padding-top: 20px;
 
+            .img-container{
+                position: relative;
+
+                img{
+                    width: 50%;
+                    position: absolute;
+                    z-index: 0;
+                    top: -80px;
+                    right: 20px;
+                }
+            }
+
             ul{
                 list-style-type: none;
-                line-height: 20px;
+                line-height: 15px;
+                margin-right: 20px;
+
+                h3{
+                    margin: 20px 0;
+                    font-size: 15px;
+                }
+
+                a{
+                    font-size: 12px;
+                    color: #494d4f;
+                }
             }
         }
     }
@@ -203,8 +229,9 @@ export default{
         background-color: #303030;
         @include centerFlex();
         justify-content: space-between;
-        // DEBUG
-        min-height: 100px;
+        height: 100px;
+        position: relative;
+        z-index: 10;
 
         .container-icon{
             @include centerFlex();
@@ -233,9 +260,5 @@ export default{
                 margin-left: 10px;
             }
         }
-
-
-
-        
     }
 </style>
